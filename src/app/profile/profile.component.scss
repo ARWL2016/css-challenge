@@ -1,5 +1,7 @@
 @import '../../variables.scss';
 
+$text-color: #666;
+
 .container {
   background-color: white;
   height: 100%;
@@ -11,8 +13,6 @@
 
 h1 {
   font-size: 1.5em;
-  // margin: 0 auto;
-  // border: 1px solid #ddd;
 }
 
 .background {
@@ -22,4 +22,131 @@ h1 {
   margin: 70px auto;
   border-radius: 3px;
   box-shadow: 3px 3px 20px #aaa;
+  padding: 50px;
 }
+
+article {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 5px 5px 20px #555;
+  display: flex;
+  flex-direction: row;
+  color: $text-color;
+}
+
+.column-left {
+  // background-color: lightgreen;
+  width: 180px;
+  height: 100%;
+
+}
+
+.profile-pic-wrapper {
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // background-color: pink;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #888 #888 #888 transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 500ms ease-in-out;
+  &:hover {
+    transform: rotate(720deg);
+  }
+
+}
+
+img {
+  width: 90px;
+  border-radius: 45px;
+  height: auto;
+  // margin: 5px;
+  // box-shadow: 0px 0px 10px #333;
+}
+
+.profile-name {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.profile-job {
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-size: 0.6em;
+}
+
+.profile-btns-wrapper {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    button {
+      width: 100px;
+      margin: 4px 0;
+      background-color: #FFF;
+      border: 1px solid $text-color;
+      border-radius: 15px;
+      font-size: 0.7em;
+      font-weight: bold;
+      color: inherit;
+      padding: 5px;
+      transition: background-color 500ms;
+      &:hover {
+        background-color: #444;
+        color: #FFF;
+      }
+    }
+
+}
+
+
+
+.column-right {
+  background-color: #eee;
+  width: 120px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.column-right .button {
+  height: 33.3333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 500ms;
+  &:hover {
+    cursor: pointer;
+    background-color: #ccc;
+  }
+}
+
+.number {
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.label {
+  margin-top: 2px;
+  font-size: 0.6em;
+}
+
+
